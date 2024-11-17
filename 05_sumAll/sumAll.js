@@ -3,8 +3,8 @@ const sumAll = function(...args) {
         return "ERROR";
     }else{
         total=args[0]
-        for(i=args[0];i<args[-1];i++){
-            total+=args[i];
+        for(i=args[0]+1;i<=args[1];i++){
+            total+=i;
         };
         return total;
     };

@@ -1,5 +1,6 @@
 const sumAll = function(...args) {
-    if (args.sort().every(arg => isNaN(arg))) {
+    args.sort()
+    if (args.some(arg => isNaN(arg)) || args.some(arg => arg<0) || args.some(arg => !Number.isInteger(arg)))  {
         return "ERROR";
     }else{
         total=args[0]
@@ -7,7 +8,7 @@ const sumAll = function(...args) {
             total+=i;
         };
         return total;
-    };
+    };  
 };
 
 // Do not edit below this line
